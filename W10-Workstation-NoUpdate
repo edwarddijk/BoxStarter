@@ -1,0 +1,41 @@
+# Boxstarter Dijk-Workstation
+# Download BoxStarter : 
+# . { iwr -useb https://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
+# Set-ExecultionPolicy -ExecutionPolicy Unrestructed
+#
+# $cred = Get-Credential
+# Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/edwarddijk/BoxStarter/master/W10-Workstation -Credential $cred
+
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+Enable-RemoteDesktop
+Enable-MicrosoftUpdate
+#Install-WindowsUpdate
+
+#Install Feature
+cinst Microsoft-Hyper-V-All -source windowsFeatures
+
+#Install software
+cinst 7zip.install
+cinst googlechrome
+cinst firefox
+cinst vlc
+cinst wget
+cinst atom
+cinst python3
+cinst gimp
+cinst azure-cli
+cinst vim
+cinst calibre
+cinst vscode
+cinst steam
+cinst crystaldiskinfo
+cinst pandoc
+cinst cpu-z.install
+cinst nmap
+cinst wireshark
+cinst microsoft-teams
+cinst office365proplus
+cinst telegram.install
+cinst powershell-core
+cinst 1password
+cinst docker-for-windows
