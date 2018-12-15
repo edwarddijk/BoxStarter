@@ -7,6 +7,8 @@
 # $cred = Get-Credential
 # Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/edwarddijk/BoxStarter/master/W10-Workstation -Credential $cred
 
+$ComputerName = "Dijk-WKS"
+
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Enable-RemoteDesktop
 Enable-MicrosoftUpdate
@@ -89,3 +91,6 @@ foreach($Package in $Packages){
   Write-Host "Package: $Package"
   Get-AppxPackage $Package | Remove-AppxPackage
 }
+
+Rename-Computer -NewName $ComputerName -Confirm:$false
+Invoke-Reboot
