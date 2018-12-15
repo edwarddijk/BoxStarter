@@ -51,6 +51,7 @@ Disable-WindowsOptionalFeature -FeatureName Printing-XPSServices-Features -Onlin
 Disable-WindowsOptionalFeature -FeatureName Microsoft-Windows-Printing-XPSServices-Package -Online -Norestart
 Disable-WindowsOptionalFeature -FeatureName WorkFolders-Client -Online -Norestart
 Disable-WindowsOptionalFeature -FeatureName FaxServicesClientPackage -Online -Norestart
+Invoke-reboot
 
 #Remove AppX Packages
 $Packages = @(
