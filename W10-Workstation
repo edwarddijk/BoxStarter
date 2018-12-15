@@ -14,6 +14,7 @@ Install-WindowsUpdate -all -acceptEula
 
 #Install Feature
 cinst Microsoft-Hyper-V-All -source windowsFeatures
+cinst Microsoft-Windows-Subsystem-Linux -source windowsFeatures
 
 #Install software
 cinst 7zip.install
@@ -43,8 +44,13 @@ cinst docker-for-windows
 
 
 #Disable WindowsFeatures
-Disable-WindowsOptionalFeature -FeatureName SMB1Protocol
-
+Disable-WindowsOptionalFeature -FeatureName SMB1Protocol -Online -Norestart
+Disable-WindowsOptionalFeature -FeatureName SMB1Protocol-Client -Online -Norestart
+Disable-WindowsOptionalFeature -FeatureName SMB1Protocol-Server -Online -Norestart
+Disable-WindowsOptionalFeature -FeatureName Printing-XPSServices-Features -Online -Norestart
+Disable-WindowsOptionalFeature -FeatureName Microsoft-Windows-Printing-XPSServices-Package -Online -Norestart
+Disable-WindowsOptionalFeature -FeatureName WorkFolders-Client -Online -Norestart
+Disable-WindowsOptionalFeature -FeatureName FaxServicesClientPackage -Online -Norestart
 
 #Remove AppX Packages
 $Packages = @(
