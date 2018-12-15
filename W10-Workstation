@@ -39,3 +39,39 @@ cinst telegram.install
 cinst powershell-core
 cinst 1password
 cinst docker-for-windows
+
+$Packages = @(
+"Microsoft.3DBuilder",
+"Microsoft.WindowsAlarms",
+"Microsoft.BingFinance",
+"Microsoft.BingNews",
+"Microsoft.BingSports",
+"Microsoft.BingWeather",
+"Microsoft.CommsPhone",
+"Microsoft.WindowsFeedbackHub",
+"Microsoft.Getstarted",
+"microsoft.windowscommunicationsapps",
+"Microsoft.WindowsMaps",
+"Microsoft.Messaging",
+"Microsoft.MicrosoftOfficeHub",
+"Microsoft.OneConnect",
+"Microsoft.People",
+"Microsoft.WindowsPhone",
+"Microsoft.SkypeApp",
+"Microsoft.Windows.Photos",
+"Microsoft.WindowsSoundRecorder",
+"Microsoft.MicrosoftStickyNotes",
+"Microsoft.ZuneMusic",
+"Microsoft.ZuneVideo",
+"Microsoft.ToDos",
+"Microsoft.Whiteboard",
+"Microsoft.OfficeLens",
+"Microsoft.Office.Sway",
+"Microsoft.Office.OneNote"
+"*Solitaire*"
+)
+
+foreach($Package in $Packages){
+  Write-Host "Package: $Package"
+  Get-AppxPackage $Package | Remove-AppxPackage
+}
