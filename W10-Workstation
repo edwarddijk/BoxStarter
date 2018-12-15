@@ -9,7 +9,10 @@
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Enable-RemoteDesktop
 Enable-MicrosoftUpdate
-Install-WindowsUpdate
+Install-WindowsUpdate --acceptEULA
+
+#Install Feature
+cinst Microsoft-Hyper-V-All -source windowsFeatures
 
 #Install software
 cinst 7zip.install
