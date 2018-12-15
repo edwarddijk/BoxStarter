@@ -1,4 +1,10 @@
 # Boxstarter Dijk-Workstation
+# Download BoxStarter : 
+# . { iwr -useb https://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
+# Set-ExecultionPolicy -ExecutionPolicy Unrestructed
+#
+# $cred = Get-Credential
+# Install-BoxstarterPackage -PackageName https://raw.githubusercontent.com/edwarddijk/BoxStarter/master/W10-Workstation -Credential $cred
 
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Enable-RemoteDesktop
