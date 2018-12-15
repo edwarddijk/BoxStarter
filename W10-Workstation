@@ -1,6 +1,6 @@
 # Boxstarter Dijk-Workstation
 
-Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
 Enable-RemoteDesktop
 Enable-MicrosoftUpdate
 Install-WindowsUpdate
