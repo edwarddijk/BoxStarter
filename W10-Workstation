@@ -38,3 +38,4 @@ cinst office365proplus
 cinst telegram.install
 cinst powershell-core
 cinst 1password
+cinst docker-for-windows
