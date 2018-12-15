@@ -1,4 +1,5 @@
 # Boxstarter Dijk-Workstation
+# For Windows 10 Ent. version 1803
 # Download BoxStarter : 
 # . { iwr -useb https://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force
 # Set-ExecultionPolicy -ExecutionPolicy Unrestructed
